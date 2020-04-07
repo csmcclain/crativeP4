@@ -1,0 +1,33 @@
+
+
+irmovq $8,%r8
+irmovq $0,%r10
+irmovq $1,%r14
+
+while:
+irmovq $0,%r13
+rrmovq %rax,%rcx 
+subq %r14,%rcx
+irmovq data,%rdx
+
+for: 
+mrmovq (%rdx),%rbx
+mrmovq 8(%rdx),%rsi
+
+subq %rsi,%rbx
+jl endIf
+addq %r14,%r13
+mrmovq (%rdx),%rbx
+rrmovq %rbx,%r9
+rrmovq %rsi,%rbx
+rrmovq %r9,%rsi
+rmmovq %rbx,(%rdx)
+rmmovq %rsi,8(%rdx)
+endIf:
+addq %r8,%rdx
+subq %r14,%rcx
+jne for
+
+andq %r13,%r13
+jne while
+
