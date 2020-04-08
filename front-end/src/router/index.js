@@ -14,6 +14,11 @@ const routes = [{
     path: '/download',
     name: 'download',
     component: download
+  },
+  {
+    path: '/',
+    name: 'main',
+    component: upload
   }
 ]
 

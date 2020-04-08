@@ -3,7 +3,7 @@
   <div class="admin">
       <h1>The Upload Page!</h1>
     <div class="heading">
-      <h2>Add an Item</h2>
+      <h2>Add a file to upload</h2>
     </div>
     <div class="add">
       <div class="form">
@@ -33,12 +33,6 @@ export default {
       items: [],
       findTitle: "",
       findItem: null,
-    }
-  },
-  computed: {
-    suggestions() {
-      let items = this.items.filter(item => item.title.toLowerCase().startsWith(this.findTitle.toLowerCase()));
-      return items.sort((a, b) => a.title > b.title);
     }
   },
   created() {

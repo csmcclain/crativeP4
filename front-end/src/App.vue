@@ -9,11 +9,14 @@
     <router-link to="/download" class="link">Download</router-link>
   </div>
   <div class="content">
-    <p>Like Box or Google Drive, only simpler! :D</p>
+    <p>Like Box or Google Drive, only simpler!</p>
     <router-view />
   </div>
   <div class="footer">
-    
+    <footer>
+      <p>GitHub:<a class="foot" href="https://github.com/csmcclain/crativeP4">
+  CS-260-Creative-Project-4</a></p>
+    </footer>
   </div>
 </div>
 </template>
@@ -41,8 +44,6 @@ body {
   padding: 0px;
   margin: 0px;
 }
-
-/* Header */
 .header {
   display: flex;
   padding: 10px 100px 0px 100px;
@@ -70,8 +71,12 @@ body {
   min-height: 500px;
 }
 
-/* Footer */
 .footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
   height: 50px;
   padding: 20px 100px 0px 100px;
   background: #f7f7f7;
@@ -93,5 +98,11 @@ h2 {
 .bag {
   width: 120px;
   height: auto;
+}
+
+.foot {
+  color: #2E8B57;
+  font-weight: bold;
+  text-decoration: none;
 }
 </style>
